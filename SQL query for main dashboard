@@ -8,10 +8,10 @@ SELECT
     table1.frameworks,
     CASE WHEN table2.score = 'N/A' THEN 'N/A' 
       WHEN table2.score < '25' THEN 'Lowest' 
-      WHEN table2.score < '50' THEN 'Developing' 
-      WHEN table2.score < '75' THEN 'Defined' 
-      WHEN table2.score < '90' THEN 'Managed' 
-      ELSE 'Optimizing' 
+      WHEN table2.score < '50' THEN 'Low' 
+      WHEN table2.score < '75' THEN 'Mid' 
+      WHEN table2.score < '90' THEN 'High' 
+      ELSE 'Highest' 
     END AS Rating,
     table2.score,
     table2.status,
@@ -48,7 +48,7 @@ WHERE
                 WHEN table2.score < '50' THEN 'Low' 
                 WHEN table2.score < '75' THEN 'Mid' 
                 WHEN table2.score < '90' THEN 'High' 
-                ELSE 'Higher' 
+                ELSE 'Highest' 
             END
         ) ILIKE {{'%' + textInput8.value + '%'}}
     )
