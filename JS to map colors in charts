@@ -1,6 +1,6 @@
 const statusColors = {
   Lowest: '#FF0000',
-  Lower: '#FFA700',
+  Low: '#FFA700',
   Mid: '#FFF400',
   High: '#A3FF00',
   Highest: '#2CBA00',
