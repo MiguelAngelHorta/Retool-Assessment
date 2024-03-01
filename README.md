@@ -1,7 +1,7 @@
 # Retool-Assessment
 Implementing automation to construct a Governance, Risk, and Compliance (GRC) Assessment web application, facilitating score calculations, retrieving mapped assessment data, and updating assessment details seamlessly.
 
-## Web App Template Scripts
+## Web App SQL, JS, & JSON Template Scripts
  - SQL query for main dashboard
    - SQL used to pull all controls and relevant data.
  - JS for metric chart
