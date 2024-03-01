@@ -1,0 +1,13 @@
+let formatted = query1.data;
+let results = {};
+formatted.implementation_title.forEach((title, idx) => {
+  if (title == '' || title == undefined) {
+    title = 'TBD';
+  }
+  if (results[title]) {
+    results[title] += 1;
+  } else {
+    results[title] = 1;
+  }
+});
+return {"values": Object.keys(results), "labels": Object.values(results)};
