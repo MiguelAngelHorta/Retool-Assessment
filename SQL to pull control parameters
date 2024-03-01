@@ -1,0 +1,3 @@
+SELECT {{urlparams.ID_ID}},DOMAIN,team,control_owner,responsible_party,ID
+FROM table1
+Where ID = {{urlparams.ID_ID}}
