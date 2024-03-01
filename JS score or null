@@ -1,0 +1,9 @@
+const implementationValue = {{select1.value}};
+const coverageValue = {{select2.value}};
+const maturityValue = {{select3.value}};
+const issueValue = {{select7.value}}; 
+
+if ( implementationValue === 0 )
+  return "N/A";
+
+return {{Score.value}};
