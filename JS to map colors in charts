@@ -1,9 +1,9 @@
 const statusColors = {
-  Initial: '#FF0000',
-  Developing: '#FFA700',
-  Defined: '#FFF400',
-  Managed: '#A3FF00',
-  Optimizing: '#2CBA00',
+  Lowest: '#FF0000',
+  Lower: '#FFA700',
+  Mid: '#FFF400',
+  High: '#A3FF00',
+  Highest: '#2CBA00',
 };
 
 const colorValues = [];
