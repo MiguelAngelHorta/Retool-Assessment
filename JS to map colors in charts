@@ -1,0 +1,19 @@
+const statusColors = {
+  Initial: '#FF0000',
+  Developing: '#FFA700',
+  Defined: '#FFF400',
+  Managed: '#A3FF00',
+  Optimizing: '#2CBA00',
+};
+
+const colorValues = [];
+
+for (const code of RatingChart.data['values']) {
+  if (statusColors[code]) {
+    colorValues.push(statusColors[code]);
+  } else {
+    colorValues.push('#CCCCCC');
+  }
+}
+
+return colorValues
