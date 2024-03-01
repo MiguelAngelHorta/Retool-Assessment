@@ -1,0 +1,7 @@
+let newData = formatDataAsArray(query1.data).filter(datum => {return datum.score != '' && datum.score != 'N/A'})
+
+newData.forEach( (datum, idx) => {
+  newData[idx].score = parseInt(datum.score)
+})
+
+return newData;
