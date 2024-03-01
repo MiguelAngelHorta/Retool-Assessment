@@ -1,0 +1,6 @@
+const implementationValue = {{select1.value || 0}};
+const coverageValue = {{select2.value || 0}};
+const maturityValue = {{select3.value || 0}};
+const issueValue = {{select7.value || 0}}; 
+
+return implementationValue + coverageValue + maturityValue + issueValue;
