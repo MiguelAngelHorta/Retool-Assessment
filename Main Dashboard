@@ -1,0 +1,55 @@
+SELECT
+    table1.id,
+    table1.domain,
+    table1.description,
+    table1.control_owner,
+    table1.team,
+    table1.assignee,
+    table1.frameworks,
+    CASE WHEN table2.score = 'N/A' THEN 'N/A' 
+      WHEN table2.score < '25' THEN 'Lowest' 
+      WHEN table2.score < '50' THEN 'Developing' 
+      WHEN table2.score < '75' THEN 'Defined' 
+      WHEN table2.score < '90' THEN 'Managed' 
+      ELSE 'Optimizing' 
+    END AS Rating,
+    table2.score,
+    table2.status,
+    table2.issue_management,
+    table2.implementation_title,
+    table2.coverage_title,
+    table2.testing_performed,
+    table2.maturity_title,
+    table2.automation,
+    table2.issue_management,
+    table2.effort_level,
+    table2.issue_management_details,
+    table2.grc_notes
+FROM
+    table1 AS table1
+JOIN
+    table2 AS table2
+ON
+    table1.id = table2.id
+WHERE
+    table1.control_scope = 'In-scope'    
+    AND ({{!textInput1.value}} OR table1.team ILIKE {{'%' + textInput1.value + '%'}})
+    AND ({{!textInput2.value}} OR table1.domain ILIKE {{'%' + textInput2.value + '%'}})
+    AND ({{!textInput3.value}} OR table1.id ILIKE {{'%' + textInput3.value + '%'}})
+    AND ({{!textInput4.value}} OR table1.control_owner ILIKE {{'%' + textInput4.value + '%'}})
+    AND ({{!textInput5.value}} OR table1.assignee ILIKE {{'%' + textInput5.value + '%'}})
+    AND ({{!textInput6.value}} OR table1.description ILIKE {{'%' + textInput6.value + '%'}})
+    AND ({{!textInput7.value}} OR table1.frameworks ILIKE {{'%' + textInput7.value + '%'}})
+    AND (
+        {{!textInput8.value}} OR (
+            CASE 
+                WHEN table2.score = 'N/A' THEN 'N/A' 
+                WHEN table2.score < '25' THEN 'Lowest' 
+                WHEN table2.score < '50' THEN 'Low' 
+                WHEN table2.score < '75' THEN 'Mid' 
+                WHEN table2.score < '90' THEN 'High' 
+                ELSE 'Higher' 
+            END
+        ) ILIKE {{'%' + textInput8.value + '%'}}
+    )
+ORDER BY id ASC;
