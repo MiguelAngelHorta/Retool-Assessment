@@ -9,7 +9,7 @@ Implementing automation to construct a Governance, Risk, and Compliance (GRC) As
  - JS to change string to array
    - Javascript used to reformat string data into an aray, change blanks into 'N/A', and strings into numbers.
  -  SQL to return array from JS script
-   - SQL used to select the array data from the JS script above
+    - SQL used to select the array data from the JS script above
  - Plotly json for JS chart
    - formatting and assigning mapped colors to chart
  - JS to map colors in charts
