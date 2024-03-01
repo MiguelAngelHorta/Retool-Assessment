@@ -3,7 +3,7 @@ Implementing automation to construct a Governance, Risk, and Compliance (GRC) As
 
 # Web App Scripts
  - SQL query for main dashboard
-  - SQL used to pull all controls and relevant data.
+   - SQL used to pull all controls and relevant data.
 - JS for metric chart
  - Javascript used to return 'TBD' for all entries that are blank for accurate status reports.
 - JS to change string to array
